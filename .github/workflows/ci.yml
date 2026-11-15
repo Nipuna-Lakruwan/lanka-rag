@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - run: uv sync --locked
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run pytest -q
+
+  bm25-benchmark:
+    # The lexical baselines need no model, so CI re-checks them on the real data.
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - run: uv run lanka-rag bench download
+      - run: uv run lanka-rag bench run bm25-word bm25-char --results /tmp/results
+      - name: Compare with committed numbers
+        run: |
+          uv run python - <<'PY'
+          import json, pathlib
+          for key in ("bm25-word", "bm25-char"):
+              new = json.loads(pathlib.Path(f"/tmp/results/raw/{key}.json").read_text())
+              old = json.loads(pathlib.Path(f"results/raw/{key}.json").read_text())
+              for a, b in zip(new["results"], old["results"], strict=True):
+                  x, y = a["metrics"]["ndcg@10"], b["metrics"]["ndcg@10"]
+                  assert abs(x - y) < 1e-6, f"{key} {a['task']}: {x} != {y}"
+          print("BM25 results reproduce exactly.")
+          PY

@@ -1,0 +1,48 @@
+[project]
+name = "lanka-rag"
+version = "0.1.0"
+description = "Local-first Sinhala/Tamil RAG with Ollama + LangChain, and a retrieval benchmark of embedding models on Sinhala, Tamil and Singlish."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Nipuna Lakruwan" }]
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27",
+    "numpy>=1.26",
+    "langchain-core>=1.0",
+    "langchain-ollama>=1.0",
+    "langchain-text-splitters>=1.0",
+    "pypdf>=5.0",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+# Hugging Face models (multilingual-e5, LaBSE, ...) that are not on Ollama.
+hf = ["sentence-transformers>=3.0"]
+
+[project.scripts]
+lanka-rag = "lanka_rag.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lanka_rag"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff.lint.per-file-ignores]
+# Test fixtures hold long Sinhala/Tamil sample sentences.
+"tests/*" = ["E501"]

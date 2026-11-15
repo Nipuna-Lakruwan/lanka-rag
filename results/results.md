@@ -1,0 +1,29 @@
+**nDCG@10** (higher is better; best per column in bold). "Sinhala avg" averages every task with Sinhala on either side.
+
+| Model | Params | Sinhala avg | si→si | si→si (no ZWJ) | si-Latn→si | ta→ta | en→en | en→si | si→en | ta→si | si→ta |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| bge-m3 | 568M | 0.757 | **0.913** | **0.906** | 0.154 | **0.900** | 0.955 | **0.879** | **0.835** | **0.802** | **0.811** |
+| snowflake-arctic-embed2 | 568M | 0.739 | 0.906 | 0.897 | 0.143 | 0.900 | 0.945 | 0.852 | 0.794 | 0.784 | 0.797 |
+| granite-embedding | 278M | 0.616 | 0.814 | 0.806 | 0.092 | 0.792 | 0.931 | 0.752 | 0.668 | 0.578 | 0.607 |
+| embeddinggemma | 308M | 0.613 | 0.718 | 0.706 | **0.309** | 0.868 | **0.965** | 0.790 | 0.567 | 0.664 | 0.539 |
+| paraphrase-multilingual | 278M | 0.446 | 0.557 | 0.536 | 0.022 | 0.493 | 0.885 | 0.667 | 0.489 | 0.433 | 0.420 |
+| bm25-char | - | 0.295 | 0.899 | 0.899 | 0.046 | 0.863 | 0.888 | 0.052 | 0.063 | 0.053 | 0.056 |
+| bm25-word | - | 0.254 | 0.755 | 0.755 | 0.046 | 0.680 | 0.879 | 0.059 | 0.062 | 0.051 | 0.053 |
+| qwen3-embedding-0.6b | 0.6B | 0.218 | 0.410 | 0.392 | 0.049 | 0.697 | 0.956 | 0.291 | 0.121 | 0.147 | 0.114 |
+| nomic-embed-text † | 137M | 0.059 | 0.078 | 0.078 | 0.040 | 0.142 | 0.923 | 0.075 | 0.052 | 0.050 | 0.041 |
+
+† English-centric model, included as a control.
+
+**Recall@1 / Recall@10** on the three monolingual tasks, plus 95% bootstrap CI of nDCG@10 for si→si:
+
+| Model | si→si R@1 | si→si R@10 | si→si nDCG@10 95% CI | ta→ta R@1 | Singlish→si R@1 | Embed speed (passages/s) |
+|---|---:|---:|---:|---:|---:|---:|
+| bge-m3 | 0.851 | 0.966 | 0.896–0.928 | 0.838 | 0.099 | 9.25 |
+| snowflake-arctic-embed2 | 0.850 | 0.958 | 0.890–0.921 | 0.839 | 0.087 | 7.49 |
+| granite-embedding | 0.716 | 0.908 | 0.793–0.835 | 0.701 | 0.056 | 13.86 |
+| embeddinggemma | 0.621 | 0.818 | 0.693–0.745 | 0.794 | 0.213 | 8.54 |
+| paraphrase-multilingual | 0.417 | 0.717 | 0.531–0.585 | 0.366 | 0.004 | 27.33 |
+| bm25-char | 0.837 | 0.952 | 0.883–0.915 | 0.797 | 0.032 | - |
+| bm25-word | 0.669 | 0.842 | 0.729–0.780 | 0.592 | 0.038 | - |
+| qwen3-embedding-0.6b | 0.278 | 0.553 | 0.382–0.436 | 0.603 | 0.030 | 0.65 |
+| nomic-embed-text | 0.058 | 0.107 | 0.063–0.095 | 0.092 | 0.026 | 30.7 |

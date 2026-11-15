@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.cache/
+.index/
+# Belebele is CC BY-SA 4.0 and re-downloaded by `lanka-rag bench download`
+data/raw/
+# Put your own PDFs here; they are not committed
+docs/
+.DS_Store
