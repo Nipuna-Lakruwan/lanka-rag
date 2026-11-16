@@ -1,0 +1,104 @@
+<!doctype html>
+<!-- Source for social-preview.png (1280x640). Regenerate with:
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --hide-scrollbars \
+       --window-size=1280,640 --screenshot=assets/social-preview.png assets/social-preview.html -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --ink: #16181d;
+    --ink-2: #4a4f59;
+    --ink-3: #7c818b;
+    --rule: #e4e2dc;
+    --bar: #2f6fd6;
+    --bar-track: #eceae4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1280px; height: 640px; overflow: hidden; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "SF Pro Text", "Helvetica Neue", "Sinhala Sangam MN", "Tamil Sangam MN", sans-serif;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    gap: 48px;
+    padding: 64px 72px;
+  }
+  .left { display: flex; flex-direction: column; }
+  .name {
+    font-family: "SF Mono", Menlo, monospace;
+    font-size: 22px; font-weight: 600; color: var(--bar);
+    letter-spacing: 0.02em;
+  }
+  h1 {
+    margin-top: 22px;
+    font-size: 54px; line-height: 1.06; font-weight: 750; letter-spacing: -0.02em;
+  }
+  .sub { margin-top: 24px; font-size: 22px; line-height: 1.42; color: var(--ink-2); }
+  .foot { margin-top: auto; }
+  .scripts { font-size: 30px; font-weight: 600; color: var(--ink); }
+  .url { margin-top: 10px; font-size: 18px; color: var(--ink-3); font-family: "SF Mono", Menlo, monospace; }
+
+  .chart { display: flex; flex-direction: column; justify-content: center; }
+  .ctitle { font-size: 21px; font-weight: 650; }
+  .csub { margin-top: 4px; font-size: 16px; color: var(--ink-3); }
+  .rows { margin-top: 22px; border-top: 1px solid var(--rule); padding-top: 14px; }
+  .row { display: grid; grid-template-columns: 236px 1fr 58px; align-items: center; height: 46px; }
+  .label { font-size: 18px; color: var(--ink-2); text-align: right; padding-right: 16px; white-space: nowrap; }
+  .label b { color: var(--ink); font-weight: 650; }
+  .track { position: relative; height: 22px; background: var(--bar-track); border-radius: 0 4px 4px 0; }
+  .fill { height: 100%; background: var(--bar); border-radius: 0 4px 4px 0; }
+  .val { font-size: 18px; font-variant-numeric: tabular-nums; color: var(--ink); text-align: right; font-weight: 600; }
+  .note {
+    position: absolute; left: calc(var(--w) + 10px); top: 50%; transform: translateY(-50%);
+    font-size: 16px; color: var(--ink-2); white-space: nowrap; font-weight: 600;
+  }
+</style>
+</head>
+<body>
+  <div class="left">
+    <div class="name">lanka-rag</div>
+    <h1>Which embedding model understands Sinhala?</h1>
+    <p class="sub">An open retrieval benchmark of local Ollama embedding models on Sinhala, Tamil and
+      Singlish, plus a RAG assistant for Sri Lankan documents.</p>
+    <div class="foot">
+      <div class="scripts">සිංහල · தமிழ் · Singlish</div>
+      <div class="url">github.com/Nipuna-Lakruwan/lanka-rag</div>
+    </div>
+  </div>
+
+  <div class="chart">
+    <div class="ctitle">Sinhala retrieval quality</div>
+    <div class="csub">nDCG@10, 900 questions · higher is better</div>
+    <div class="rows" id="rows"></div>
+  </div>
+
+<script>
+  const data = [
+    ["bge-m3", 0.913, true],
+    ["snowflake-arctic-embed2", 0.906],
+    ["BM25, char n-grams", 0.899],
+    ["granite-embedding", 0.814],
+    ["embeddinggemma", 0.718],
+    ["paraphrase-multilingual", 0.557],
+    ["qwen3-embedding 0.6b", 0.410],
+    ["nomic-embed-text", 0.078, false, "near random"],
+  ];
+  const rows = document.getElementById("rows");
+  for (const [name, v, best, note] of data) {
+    const w = (v * 100).toFixed(1) + "%";
+    rows.insertAdjacentHTML("beforeend", `
+      <div class="row">
+        <div class="label">${best ? `<b>${name}</b>` : name}</div>
+        <div class="track" style="--w:${w}">
+          <div class="fill" style="width:${w}"></div>
+          ${note ? `<span class="note">← ${note}</span>` : ""}
+        </div>
+        <div class="val">${v.toFixed(3).slice(1)}</div>
+      </div>`);
+  }
+</script>
+</body>
+</html>

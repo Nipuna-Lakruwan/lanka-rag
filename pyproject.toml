@@ -1,6 +1,6 @@
 [project]
 name = "lanka-rag"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Local-first Sinhala/Tamil RAG with Ollama + LangChain, and a retrieval benchmark of embedding models on Sinhala, Tamil and Singlish."
 readme = "README.md"
 license = "MIT"
@@ -50,6 +50,12 @@ dev = ["pytest>=8.0", "ruff>=0.6"]
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/lanka_rag/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/lanka_rag", "tests", "README.md", "LICENSE", "CITATION.cff", "pyproject.toml"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/lanka_rag"]

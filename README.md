@@ -1,8 +1,9 @@
 # lanka-rag
 
 [![CI](https://github.com/Nipuna-Lakruwan/lanka-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/Nipuna-Lakruwan/lanka-rag/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml)
+[![PyPI](https://img.shields.io/pypi/v/lanka-rag.svg)](https://pypi.org/project/lanka-rag/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Nipuna-Lakruwan/lanka-rag/blob/main/LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://github.com/Nipuna-Lakruwan/lanka-rag/blob/main/pyproject.toml)
 [![Runs locally with Ollama](https://img.shields.io/badge/runs%20locally-Ollama-black.svg)](https://ollama.com)
 
 Sinhala embedding benchmark · Tamil retrieval · Singlish · local RAG for Sri Lanka ·
@@ -45,8 +46,8 @@ start of long Sinhala passages, and the speed column was measured with nothing e
 the machine. No model hit its context limit on these passages (checked in the Ollama logs).
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="results/ndcg_heatmap_dark.svg">
-  <img alt="Heatmap of nDCG@10 for each embedding model on each Sinhala/Tamil retrieval task" src="results/ndcg_heatmap_light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Nipuna-Lakruwan/lanka-rag/main/results/ndcg_heatmap_dark.svg">
+  <img alt="Heatmap of nDCG@10 for each embedding model on each Sinhala/Tamil retrieval task" src="https://raw.githubusercontent.com/Nipuna-Lakruwan/lanka-rag/main/results/ndcg_heatmap_light.svg">
 </picture>
 
 ## Results
@@ -83,7 +84,7 @@ the machine. No model hit its context limit on these passages (checked in the Ol
 | nomic-embed-text | 0.058 | 0.107 | 0.063–0.095 | 0.092 | 0.026 | 30.7 |
 <!-- RESULTS:END -->
 
-Raw per-query ranks for every model are in [`results/raw/`](results/raw), so you can run your
+Raw per-query ranks for every model are in [`results/raw/`](https://github.com/Nipuna-Lakruwan/lanka-rag/tree/main/results/raw), so you can run your
 own error analysis or significance tests.
 
 ## The benchmark
@@ -108,14 +109,14 @@ with 95% bootstrap confidence intervals.
 
 MTEB already has a `BelebeleRetrieval` task. This benchmark adds the Singlish, ZWJ-robustness and
 Tamil↔Sinhala tasks, local models you can actually run through Ollama, the exact prompt
-format each model expects ([`models.py`](src/lanka_rag/models.py)), and lexical baselines that
+format each model expects ([`models.py`](https://github.com/Nipuna-Lakruwan/lanka-rag/blob/main/src/lanka_rag/models.py)), and lexical baselines that
 handle Sinhala correctly.
 
 ### Sinhala text pitfalls this code handles
 
 - **`\w` regexes shred Sinhala words.** Vowel signs are combining marks, which Python's `\w`
   doesn't count as word characters: `re.findall(r"\w+", "ජනාධිපතිවරයා")` returns
-  `['ජන', 'ධ', 'පත', 'වරය']`. [`text.tokenize`](src/lanka_rag/text.py) splits on
+  `['ජන', 'ධ', 'පත', 'වරය']`. [`text.tokenize`](https://github.com/Nipuna-Lakruwan/lanka-rag/blob/main/src/lanka_rag/text.py) splits on
   Unicode categories instead, so a naive BM25 baseline here is not secretly broken.
 - **ZWJ spellings.** `ශ්‍රී` (with U+200D) and `ශ්රී` are the same word. Lexical matching strips
   ZWJ, and stray joiners that don't follow the virama are removed everywhere.
@@ -127,7 +128,14 @@ handle Sinhala correctly.
 
 ## Quick start
 
-Needs [uv](https://docs.astral.sh/uv/) and [Ollama](https://ollama.com).
+Needs [Ollama](https://ollama.com). To use the CLI and the library, install from PyPI:
+
+```bash
+pip install lanka-rag
+```
+
+To reproduce the benchmark or run the Acts demo, clone the repo and use
+[uv](https://docs.astral.sh/uv/):
 
 ```bash
 git clone https://github.com/Nipuna-Lakruwan/lanka-rag.git
@@ -177,7 +185,7 @@ uv run lanka-rag chat
 ```
 
 Retrieval is hybrid: dense embeddings plus character n-gram BM25, fused with reciprocal rank
-fusion ([`rag/store.py`](src/lanka_rag/rag/store.py)). BM25 only scores chunks in the
+fusion ([`rag/store.py`](https://github.com/Nipuna-Lakruwan/lanka-rag/blob/main/src/lanka_rag/rag/store.py)). BM25 only scores chunks in the
 question's language, because across languages it matches on numbers and stray Latin letters and
 adds noise. The answer comes from a local Ollama chat
 model (default `qwen3:4b-instruct-2507-q4_K_M`, change it with `--llm`). It answers in the
@@ -241,12 +249,12 @@ tests/             unit tests (no network or models needed)
 
 New models, Sinhala/Tamil test sets and bug reports are welcome. The quickest useful
 contribution is benchmarking a model that is not in the table: see
-[CONTRIBUTING.md](CONTRIBUTING.md), or [open a model request](https://github.com/Nipuna-Lakruwan/lanka-rag/issues/new?template=model_request.yml).
+[CONTRIBUTING.md](https://github.com/Nipuna-Lakruwan/lanka-rag/blob/main/CONTRIBUTING.md), or [open a model request](https://github.com/Nipuna-Lakruwan/lanka-rag/issues/new?template=model_request.yml).
 
 ## Citing
 
 If you use the benchmark or its results, please cite this repository (GitHub's "Cite this
-repository" button uses [CITATION.cff](CITATION.cff)) and the Belebele paper.
+repository" button uses [CITATION.cff](https://github.com/Nipuna-Lakruwan/lanka-rag/blob/main/CITATION.cff)) and the Belebele paper.
 
 ## Credits and licenses
 
