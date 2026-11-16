@@ -1,5 +1,13 @@
 # lanka-rag
 
+[![CI](https://github.com/Nipuna-Lakruwan/lanka-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/Nipuna-Lakruwan/lanka-rag/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml)
+[![Runs locally with Ollama](https://img.shields.io/badge/runs%20locally-Ollama-black.svg)](https://ollama.com)
+
+Sinhala embedding benchmark · Tamil retrieval · Singlish · local RAG for Sri Lanka ·
+සිංහල · தமிழ்
+
 **Which embedding model actually understands Sinhala?** This repo has a reproducible retrieval
 benchmark for Sinhala, Tamil and Singlish (romanized Sinhala), plus a local-first RAG assistant
 for Sri Lankan documents built with LangChain and Ollama. Everything runs on a laptop with no
@@ -228,6 +236,17 @@ tests/             unit tests (no network or models needed)
 - [ ] Answer-quality evaluation of local LLMs (qwen3, gemma3) in Sinhala and Tamil
 - [ ] multilingual-e5 and LaBSE results (code is in, not run yet)
 - [ ] Small web UI
+
+## Contributing
+
+New models, Sinhala/Tamil test sets and bug reports are welcome. The quickest useful
+contribution is benchmarking a model that is not in the table: see
+[CONTRIBUTING.md](CONTRIBUTING.md), or [open a model request](https://github.com/Nipuna-Lakruwan/lanka-rag/issues/new?template=model_request.yml).
+
+## Citing
+
+If you use the benchmark or its results, please cite this repository (GitHub's "Cite this
+repository" button uses [CITATION.cff](CITATION.cff)) and the Belebele paper.
 
 ## Credits and licenses
 

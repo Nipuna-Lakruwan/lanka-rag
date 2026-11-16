@@ -1,0 +1,28 @@
+name: Benchmark a model
+description: Ask for an embedding model to be added to the Sinhala/Tamil results
+labels: ["model-request"]
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      description: Ollama tag or Hugging Face id
+      placeholder: "e.g. intfloat/multilingual-e5-large or jina/jina-embeddings-v2-base"
+    validations:
+      required: true
+  - type: input
+    id: card
+    attributes:
+      label: Model card link
+      description: Needed to get the query/document prompt prefixes right
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this model?
+      description: Claimed Sinhala/Tamil support, size, license, anything else useful
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Contribution
+      options:
+        - label: I can run it myself and open a PR (see CONTRIBUTING.md)

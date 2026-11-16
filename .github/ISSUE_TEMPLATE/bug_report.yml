@@ -1,0 +1,23 @@
+name: Bug report
+description: Something is broken or the Sinhala/Tamil output looks wrong
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include the command you ran and the full error or wrong output
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Sample text or file
+      description: For text problems, paste the exact string or attach a small file, plus `lanka-rag inspect <file>` output
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "macOS 15 / Ubuntu 24.04, Python 3.12, Ollama 0.x, model names"
+    validations:
+      required: true

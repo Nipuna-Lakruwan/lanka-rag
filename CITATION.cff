@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this benchmark or its results, please cite it as below."
+title: "lanka-rag: a Sinhala and Tamil embedding retrieval benchmark and local RAG assistant"
+type: software
+authors:
+  - given-names: Nipuna
+    family-names: Lakruwan
+repository-code: "https://github.com/Nipuna-Lakruwan/lanka-rag"
+license: MIT
+version: 0.1.0
+date-released: "2026-11-16"
+keywords:
+  - Sinhala
+  - Tamil
+  - Singlish
+  - Sri Lanka
+  - retrieval
+  - embeddings
+  - benchmark
+  - RAG
+references:
+  - type: article
+    title: "The Belebele Benchmark: a Parallel Reading Comprehension Dataset in 122 Language Variants"
+    authors:
+      - family-names: Bandarkar
+        given-names: Lucas
+      - name: "et al."
+    year: 2024
+    conference:
+      name: "ACL 2024"

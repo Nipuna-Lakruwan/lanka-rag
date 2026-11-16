@@ -5,6 +5,22 @@ description = "Local-first Sinhala/Tamil RAG with Ollama + LangChain, and a retr
 readme = "README.md"
 license = "MIT"
 authors = [{ name = "Nipuna Lakruwan" }]
+keywords = [
+    "sinhala", "tamil", "singlish", "sri-lanka", "rag", "retrieval", "embeddings",
+    "benchmark", "ollama", "langchain", "multilingual", "nlp", "low-resource-languages",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: Tamil",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+]
 requires-python = ">=3.11"
 dependencies = [
     "httpx>=0.27",
@@ -15,6 +31,11 @@ dependencies = [
     "pypdf>=5.0",
     "rich>=13.7",
 ]
+
+[project.urls]
+Homepage = "https://github.com/Nipuna-Lakruwan/lanka-rag"
+Results = "https://github.com/Nipuna-Lakruwan/lanka-rag/blob/main/results/results.md"
+Issues = "https://github.com/Nipuna-Lakruwan/lanka-rag/issues"
 
 [project.optional-dependencies]
 # Hugging Face models (multilingual-e5, LaBSE, ...) that are not on Ollama.
