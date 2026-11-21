@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 936 406" width="936" height="406" font-family="system-ui,-apple-system,Segoe UI,Noto Sans Sinhala,Noto Sans Tamil,sans-serif" role="img" aria-label="Heatmap of nDCG@10 per model and retrieval task">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 936 502" width="936" height="502" font-family="system-ui,-apple-system,Segoe UI,Noto Sans Sinhala,Noto Sans Tamil,sans-serif" role="img" aria-label="Heatmap of nDCG@10 per model and retrieval task">
 <rect width="100%" height="100%" fill="#fcfcfb"/>
 <text x="16" y="26" font-size="15" font-weight="600" fill="#0b0b0b">Sinhala / Tamil retrieval on Belebele: nDCG@10</text>
 <text x="16" y="45" font-size="12" fill="#52514e">query language → passage language · 900 questions × 488 passages per task · darker = better</text>
@@ -49,138 +49,195 @@
 <text x="799.0" y="125.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.78</text>
 <rect x="840" y="106" width="78" height="30" rx="4" fill="#184f95"><title>snowflake-arctic-embed2 · si→ta: 0.797</title></rect>
 <text x="879.0" y="125.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.80</text>
-<text x="190" y="157.0" font-size="12" text-anchor="end" fill="#0b0b0b">granite-embedding</text>
-<rect x="200" y="138" width="78" height="30" rx="4" fill="#184f95"><title>granite-embedding · si→si: 0.814</title></rect>
-<text x="239.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.81</text>
-<rect x="280" y="138" width="78" height="30" rx="4" fill="#184f95"><title>granite-embedding · si→si (no ZWJ): 0.806</title></rect>
-<text x="319.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.81</text>
-<rect x="360" y="138" width="78" height="30" rx="4" fill="#b7d3f6"><title>granite-embedding · si-Latn→si: 0.092</title></rect>
-<text x="399.0" y="157.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.09</text>
-<rect x="440" y="138" width="78" height="30" rx="4" fill="#184f95"><title>granite-embedding · ta→ta: 0.792</title></rect>
-<text x="479.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.79</text>
-<rect x="520" y="138" width="78" height="30" rx="4" fill="#104281"><title>granite-embedding · en→en: 0.931</title></rect>
-<text x="559.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.93</text>
-<rect x="600" y="138" width="78" height="30" rx="4" fill="#1c5cab"><title>granite-embedding · en→si: 0.752</title></rect>
-<text x="639.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.75</text>
-<rect x="680" y="138" width="78" height="30" rx="4" fill="#256abf"><title>granite-embedding · si→en: 0.668</title></rect>
-<text x="719.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.67</text>
-<rect x="760" y="138" width="78" height="30" rx="4" fill="#2a78d6"><title>granite-embedding · ta→si: 0.578</title></rect>
-<text x="799.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.58</text>
-<rect x="840" y="138" width="78" height="30" rx="4" fill="#2a78d6"><title>granite-embedding · si→ta: 0.607</title></rect>
-<text x="879.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.61</text>
-<text x="190" y="189.0" font-size="12" text-anchor="end" fill="#0b0b0b">embeddinggemma</text>
-<rect x="200" y="170" width="78" height="30" rx="4" fill="#1c5cab"><title>embeddinggemma · si→si: 0.718</title></rect>
-<text x="239.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.72</text>
-<rect x="280" y="170" width="78" height="30" rx="4" fill="#256abf"><title>embeddinggemma · si→si (no ZWJ): 0.706</title></rect>
-<text x="319.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.71</text>
-<rect x="360" y="170" width="78" height="30" rx="4" fill="#6da7ec"><title>embeddinggemma · si-Latn→si: 0.309</title></rect>
-<text x="399.0" y="189.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.31</text>
-<rect x="440" y="170" width="78" height="30" rx="4" fill="#184f95"><title>embeddinggemma · ta→ta: 0.868</title></rect>
-<text x="479.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.87</text>
-<rect x="520" y="170" width="78" height="30" rx="4" fill="#0d366b"><title>embeddinggemma · en→en: 0.965</title></rect>
+<text x="190" y="157.0" font-size="12" text-anchor="end" fill="#0b0b0b">multilingual-e5-large</text>
+<rect x="200" y="138" width="78" height="30" rx="4" fill="#104281"><title>multilingual-e5-large · si→si: 0.875</title></rect>
+<text x="239.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.88</text>
+<rect x="280" y="138" width="78" height="30" rx="4" fill="#184f95"><title>multilingual-e5-large · si→si (no ZWJ): 0.866</title></rect>
+<text x="319.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.87</text>
+<rect x="360" y="138" width="78" height="30" rx="4" fill="#b7d3f6"><title>multilingual-e5-large · si-Latn→si: 0.113</title></rect>
+<text x="399.0" y="157.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.11</text>
+<rect x="440" y="138" width="78" height="30" rx="4" fill="#104281"><title>multilingual-e5-large · ta→ta: 0.888</title></rect>
+<text x="479.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.89</text>
+<rect x="520" y="138" width="78" height="30" rx="4" fill="#0d366b"><title>multilingual-e5-large · en→en: 0.965</title></rect>
+<text x="559.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.97</text>
+<rect x="600" y="138" width="78" height="30" rx="4" fill="#104281"><title>multilingual-e5-large · en→si: 0.904</title></rect>
+<text x="639.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.90</text>
+<rect x="680" y="138" width="78" height="30" rx="4" fill="#1c5cab"><title>multilingual-e5-large · si→en: 0.773</title></rect>
+<text x="719.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.77</text>
+<rect x="760" y="138" width="78" height="30" rx="4" fill="#184f95"><title>multilingual-e5-large · ta→si: 0.795</title></rect>
+<text x="799.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.79</text>
+<rect x="840" y="138" width="78" height="30" rx="4" fill="#1c5cab"><title>multilingual-e5-large · si→ta: 0.776</title></rect>
+<text x="879.0" y="157.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.78</text>
+<text x="190" y="189.0" font-size="12" text-anchor="end" fill="#0b0b0b">multilingual-e5-base</text>
+<rect x="200" y="170" width="78" height="30" rx="4" fill="#184f95"><title>multilingual-e5-base · si→si: 0.818</title></rect>
+<text x="239.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.82</text>
+<rect x="280" y="170" width="78" height="30" rx="4" fill="#184f95"><title>multilingual-e5-base · si→si (no ZWJ): 0.804</title></rect>
+<text x="319.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.80</text>
+<rect x="360" y="170" width="78" height="30" rx="4" fill="#b7d3f6"><title>multilingual-e5-base · si-Latn→si: 0.061</title></rect>
+<text x="399.0" y="189.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.06</text>
+<rect x="440" y="170" width="78" height="30" rx="4" fill="#184f95"><title>multilingual-e5-base · ta→ta: 0.857</title></rect>
+<text x="479.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.86</text>
+<rect x="520" y="170" width="78" height="30" rx="4" fill="#104281"><title>multilingual-e5-base · en→en: 0.958</title></rect>
 <text x="559.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.96</text>
-<rect x="600" y="170" width="78" height="30" rx="4" fill="#1c5cab"><title>embeddinggemma · en→si: 0.790</title></rect>
-<text x="639.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.79</text>
-<rect x="680" y="170" width="78" height="30" rx="4" fill="#2a78d6"><title>embeddinggemma · si→en: 0.567</title></rect>
-<text x="719.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.57</text>
-<rect x="760" y="170" width="78" height="30" rx="4" fill="#256abf"><title>embeddinggemma · ta→si: 0.664</title></rect>
-<text x="799.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.66</text>
-<rect x="840" y="170" width="78" height="30" rx="4" fill="#3987e5"><title>embeddinggemma · si→ta: 0.539</title></rect>
-<text x="879.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.54</text>
-<text x="190" y="221.0" font-size="12" text-anchor="end" fill="#0b0b0b">paraphrase-multilingual</text>
-<rect x="200" y="202" width="78" height="30" rx="4" fill="#2a78d6"><title>paraphrase-multilingual · si→si: 0.557</title></rect>
-<text x="239.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.56</text>
-<rect x="280" y="202" width="78" height="30" rx="4" fill="#3987e5"><title>paraphrase-multilingual · si→si (no ZWJ): 0.536</title></rect>
-<text x="319.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.54</text>
-<rect x="360" y="202" width="78" height="30" rx="4" fill="#cde2fb"><title>paraphrase-multilingual · si-Latn→si: 0.022</title></rect>
-<text x="399.0" y="221.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.02</text>
-<rect x="440" y="202" width="78" height="30" rx="4" fill="#3987e5"><title>paraphrase-multilingual · ta→ta: 0.493</title></rect>
-<text x="479.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.49</text>
-<rect x="520" y="202" width="78" height="30" rx="4" fill="#104281"><title>paraphrase-multilingual · en→en: 0.885</title></rect>
-<text x="559.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.89</text>
-<rect x="600" y="202" width="78" height="30" rx="4" fill="#256abf"><title>paraphrase-multilingual · en→si: 0.667</title></rect>
-<text x="639.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.67</text>
-<rect x="680" y="202" width="78" height="30" rx="4" fill="#3987e5"><title>paraphrase-multilingual · si→en: 0.489</title></rect>
-<text x="719.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.49</text>
-<rect x="760" y="202" width="78" height="30" rx="4" fill="#5598e7"><title>paraphrase-multilingual · ta→si: 0.433</title></rect>
-<text x="799.0" y="221.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.43</text>
-<rect x="840" y="202" width="78" height="30" rx="4" fill="#5598e7"><title>paraphrase-multilingual · si→ta: 0.420</title></rect>
-<text x="879.0" y="221.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.42</text>
-<text x="190" y="253.0" font-size="12" text-anchor="end" fill="#0b0b0b">bm25-char</text>
-<rect x="200" y="234" width="78" height="30" rx="4" fill="#104281"><title>bm25-char · si→si: 0.899</title></rect>
-<text x="239.0" y="253.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.90</text>
-<rect x="280" y="234" width="78" height="30" rx="4" fill="#104281"><title>bm25-char · si→si (no ZWJ): 0.899</title></rect>
-<text x="319.0" y="253.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.90</text>
-<rect x="360" y="234" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-char · si-Latn→si: 0.046</title></rect>
-<text x="399.0" y="253.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
-<rect x="440" y="234" width="78" height="30" rx="4" fill="#184f95"><title>bm25-char · ta→ta: 0.863</title></rect>
-<text x="479.0" y="253.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.86</text>
-<rect x="520" y="234" width="78" height="30" rx="4" fill="#104281"><title>bm25-char · en→en: 0.888</title></rect>
-<text x="559.0" y="253.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.89</text>
-<rect x="600" y="234" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-char · en→si: 0.052</title></rect>
-<text x="639.0" y="253.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
-<rect x="680" y="234" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-char · si→en: 0.063</title></rect>
-<text x="719.0" y="253.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.06</text>
-<rect x="760" y="234" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-char · ta→si: 0.053</title></rect>
-<text x="799.0" y="253.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
-<rect x="840" y="234" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-char · si→ta: 0.056</title></rect>
-<text x="879.0" y="253.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.06</text>
-<text x="190" y="285.0" font-size="12" text-anchor="end" fill="#0b0b0b">bm25-word</text>
-<rect x="200" y="266" width="78" height="30" rx="4" fill="#1c5cab"><title>bm25-word · si→si: 0.755</title></rect>
-<text x="239.0" y="285.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.76</text>
-<rect x="280" y="266" width="78" height="30" rx="4" fill="#1c5cab"><title>bm25-word · si→si (no ZWJ): 0.755</title></rect>
-<text x="319.0" y="285.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.76</text>
-<rect x="360" y="266" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-word · si-Latn→si: 0.046</title></rect>
-<text x="399.0" y="285.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
-<rect x="440" y="266" width="78" height="30" rx="4" fill="#256abf"><title>bm25-word · ta→ta: 0.680</title></rect>
-<text x="479.0" y="285.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.68</text>
-<rect x="520" y="266" width="78" height="30" rx="4" fill="#104281"><title>bm25-word · en→en: 0.879</title></rect>
-<text x="559.0" y="285.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.88</text>
-<rect x="600" y="266" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-word · en→si: 0.059</title></rect>
-<text x="639.0" y="285.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.06</text>
-<rect x="680" y="266" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-word · si→en: 0.062</title></rect>
-<text x="719.0" y="285.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.06</text>
-<rect x="760" y="266" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-word · ta→si: 0.051</title></rect>
-<text x="799.0" y="285.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
-<rect x="840" y="266" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-word · si→ta: 0.053</title></rect>
-<text x="879.0" y="285.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
-<text x="190" y="317.0" font-size="12" text-anchor="end" fill="#0b0b0b">qwen3-embedding-0.6b</text>
-<rect x="200" y="298" width="78" height="30" rx="4" fill="#5598e7"><title>qwen3-embedding-0.6b · si→si: 0.410</title></rect>
-<text x="239.0" y="317.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.41</text>
-<rect x="280" y="298" width="78" height="30" rx="4" fill="#5598e7"><title>qwen3-embedding-0.6b · si→si (no ZWJ): 0.392</title></rect>
-<text x="319.0" y="317.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.39</text>
-<rect x="360" y="298" width="78" height="30" rx="4" fill="#b7d3f6"><title>qwen3-embedding-0.6b · si-Latn→si: 0.049</title></rect>
-<text x="399.0" y="317.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
-<rect x="440" y="298" width="78" height="30" rx="4" fill="#256abf"><title>qwen3-embedding-0.6b · ta→ta: 0.697</title></rect>
-<text x="479.0" y="317.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.70</text>
-<rect x="520" y="298" width="78" height="30" rx="4" fill="#104281"><title>qwen3-embedding-0.6b · en→en: 0.956</title></rect>
-<text x="559.0" y="317.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.96</text>
-<rect x="600" y="298" width="78" height="30" rx="4" fill="#86b6ef"><title>qwen3-embedding-0.6b · en→si: 0.291</title></rect>
-<text x="639.0" y="317.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.29</text>
-<rect x="680" y="298" width="78" height="30" rx="4" fill="#b7d3f6"><title>qwen3-embedding-0.6b · si→en: 0.121</title></rect>
-<text x="719.0" y="317.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.12</text>
-<rect x="760" y="298" width="78" height="30" rx="4" fill="#9ec5f4"><title>qwen3-embedding-0.6b · ta→si: 0.147</title></rect>
-<text x="799.0" y="317.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.15</text>
-<rect x="840" y="298" width="78" height="30" rx="4" fill="#b7d3f6"><title>qwen3-embedding-0.6b · si→ta: 0.114</title></rect>
-<text x="879.0" y="317.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.11</text>
-<text x="190" y="349.0" font-size="12" text-anchor="end" fill="#0b0b0b">nomic-embed-text</text>
-<rect x="200" y="330" width="78" height="30" rx="4" fill="#b7d3f6"><title>nomic-embed-text · si→si: 0.078</title></rect>
-<text x="239.0" y="349.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.08</text>
-<rect x="280" y="330" width="78" height="30" rx="4" fill="#b7d3f6"><title>nomic-embed-text · si→si (no ZWJ): 0.078</title></rect>
-<text x="319.0" y="349.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.08</text>
-<rect x="360" y="330" width="78" height="30" rx="4" fill="#cde2fb"><title>nomic-embed-text · si-Latn→si: 0.040</title></rect>
-<text x="399.0" y="349.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.04</text>
-<rect x="440" y="330" width="78" height="30" rx="4" fill="#9ec5f4"><title>nomic-embed-text · ta→ta: 0.142</title></rect>
-<text x="479.0" y="349.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.14</text>
-<rect x="520" y="330" width="78" height="30" rx="4" fill="#104281"><title>nomic-embed-text · en→en: 0.923</title></rect>
-<text x="559.0" y="349.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.92</text>
-<rect x="600" y="330" width="78" height="30" rx="4" fill="#b7d3f6"><title>nomic-embed-text · en→si: 0.075</title></rect>
-<text x="639.0" y="349.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.08</text>
-<rect x="680" y="330" width="78" height="30" rx="4" fill="#b7d3f6"><title>nomic-embed-text · si→en: 0.052</title></rect>
-<text x="719.0" y="349.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
-<rect x="760" y="330" width="78" height="30" rx="4" fill="#b7d3f6"><title>nomic-embed-text · ta→si: 0.050</title></rect>
+<rect x="600" y="170" width="78" height="30" rx="4" fill="#184f95"><title>multilingual-e5-base · en→si: 0.828</title></rect>
+<text x="639.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.83</text>
+<rect x="680" y="170" width="78" height="30" rx="4" fill="#256abf"><title>multilingual-e5-base · si→en: 0.645</title></rect>
+<text x="719.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.65</text>
+<rect x="760" y="170" width="78" height="30" rx="4" fill="#256abf"><title>multilingual-e5-base · ta→si: 0.697</title></rect>
+<text x="799.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.70</text>
+<rect x="840" y="170" width="78" height="30" rx="4" fill="#256abf"><title>multilingual-e5-base · si→ta: 0.652</title></rect>
+<text x="879.0" y="189.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.65</text>
+<text x="190" y="221.0" font-size="12" text-anchor="end" fill="#0b0b0b">granite-embedding</text>
+<rect x="200" y="202" width="78" height="30" rx="4" fill="#184f95"><title>granite-embedding · si→si: 0.814</title></rect>
+<text x="239.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.81</text>
+<rect x="280" y="202" width="78" height="30" rx="4" fill="#184f95"><title>granite-embedding · si→si (no ZWJ): 0.806</title></rect>
+<text x="319.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.81</text>
+<rect x="360" y="202" width="78" height="30" rx="4" fill="#b7d3f6"><title>granite-embedding · si-Latn→si: 0.092</title></rect>
+<text x="399.0" y="221.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.09</text>
+<rect x="440" y="202" width="78" height="30" rx="4" fill="#184f95"><title>granite-embedding · ta→ta: 0.792</title></rect>
+<text x="479.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.79</text>
+<rect x="520" y="202" width="78" height="30" rx="4" fill="#104281"><title>granite-embedding · en→en: 0.931</title></rect>
+<text x="559.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.93</text>
+<rect x="600" y="202" width="78" height="30" rx="4" fill="#1c5cab"><title>granite-embedding · en→si: 0.752</title></rect>
+<text x="639.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.75</text>
+<rect x="680" y="202" width="78" height="30" rx="4" fill="#256abf"><title>granite-embedding · si→en: 0.668</title></rect>
+<text x="719.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.67</text>
+<rect x="760" y="202" width="78" height="30" rx="4" fill="#2a78d6"><title>granite-embedding · ta→si: 0.578</title></rect>
+<text x="799.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.58</text>
+<rect x="840" y="202" width="78" height="30" rx="4" fill="#2a78d6"><title>granite-embedding · si→ta: 0.607</title></rect>
+<text x="879.0" y="221.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.61</text>
+<text x="190" y="253.0" font-size="12" text-anchor="end" fill="#0b0b0b">embeddinggemma</text>
+<rect x="200" y="234" width="78" height="30" rx="4" fill="#1c5cab"><title>embeddinggemma · si→si: 0.718</title></rect>
+<text x="239.0" y="253.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.72</text>
+<rect x="280" y="234" width="78" height="30" rx="4" fill="#256abf"><title>embeddinggemma · si→si (no ZWJ): 0.706</title></rect>
+<text x="319.0" y="253.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.71</text>
+<rect x="360" y="234" width="78" height="30" rx="4" fill="#6da7ec"><title>embeddinggemma · si-Latn→si: 0.309</title></rect>
+<text x="399.0" y="253.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.31</text>
+<rect x="440" y="234" width="78" height="30" rx="4" fill="#184f95"><title>embeddinggemma · ta→ta: 0.868</title></rect>
+<text x="479.0" y="253.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.87</text>
+<rect x="520" y="234" width="78" height="30" rx="4" fill="#0d366b"><title>embeddinggemma · en→en: 0.965</title></rect>
+<text x="559.0" y="253.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.96</text>
+<rect x="600" y="234" width="78" height="30" rx="4" fill="#1c5cab"><title>embeddinggemma · en→si: 0.790</title></rect>
+<text x="639.0" y="253.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.79</text>
+<rect x="680" y="234" width="78" height="30" rx="4" fill="#2a78d6"><title>embeddinggemma · si→en: 0.567</title></rect>
+<text x="719.0" y="253.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.57</text>
+<rect x="760" y="234" width="78" height="30" rx="4" fill="#256abf"><title>embeddinggemma · ta→si: 0.664</title></rect>
+<text x="799.0" y="253.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.66</text>
+<rect x="840" y="234" width="78" height="30" rx="4" fill="#3987e5"><title>embeddinggemma · si→ta: 0.539</title></rect>
+<text x="879.0" y="253.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.54</text>
+<text x="190" y="285.0" font-size="12" text-anchor="end" fill="#0b0b0b">labse</text>
+<rect x="200" y="266" width="78" height="30" rx="4" fill="#256abf"><title>labse · si→si: 0.692</title></rect>
+<text x="239.0" y="285.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.69</text>
+<rect x="280" y="266" width="78" height="30" rx="4" fill="#256abf"><title>labse · si→si (no ZWJ): 0.692</title></rect>
+<text x="319.0" y="285.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.69</text>
+<rect x="360" y="266" width="78" height="30" rx="4" fill="#b7d3f6"><title>labse · si-Latn→si: 0.105</title></rect>
+<text x="399.0" y="285.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.11</text>
+<rect x="440" y="266" width="78" height="30" rx="4" fill="#256abf"><title>labse · ta→ta: 0.686</title></rect>
+<text x="479.0" y="285.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.69</text>
+<rect x="520" y="266" width="78" height="30" rx="4" fill="#1c5cab"><title>labse · en→en: 0.786</title></rect>
+<text x="559.0" y="285.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.79</text>
+<rect x="600" y="266" width="78" height="30" rx="4" fill="#1c5cab"><title>labse · en→si: 0.715</title></rect>
+<text x="639.0" y="285.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.71</text>
+<rect x="680" y="266" width="78" height="30" rx="4" fill="#256abf"><title>labse · si→en: 0.643</title></rect>
+<text x="719.0" y="285.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.64</text>
+<rect x="760" y="266" width="78" height="30" rx="4" fill="#2a78d6"><title>labse · ta→si: 0.619</title></rect>
+<text x="799.0" y="285.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.62</text>
+<rect x="840" y="266" width="78" height="30" rx="4" fill="#256abf"><title>labse · si→ta: 0.636</title></rect>
+<text x="879.0" y="285.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.64</text>
+<text x="190" y="317.0" font-size="12" text-anchor="end" fill="#0b0b0b">paraphrase-multilingual</text>
+<rect x="200" y="298" width="78" height="30" rx="4" fill="#2a78d6"><title>paraphrase-multilingual · si→si: 0.557</title></rect>
+<text x="239.0" y="317.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.56</text>
+<rect x="280" y="298" width="78" height="30" rx="4" fill="#3987e5"><title>paraphrase-multilingual · si→si (no ZWJ): 0.536</title></rect>
+<text x="319.0" y="317.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.54</text>
+<rect x="360" y="298" width="78" height="30" rx="4" fill="#cde2fb"><title>paraphrase-multilingual · si-Latn→si: 0.022</title></rect>
+<text x="399.0" y="317.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.02</text>
+<rect x="440" y="298" width="78" height="30" rx="4" fill="#3987e5"><title>paraphrase-multilingual · ta→ta: 0.493</title></rect>
+<text x="479.0" y="317.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.49</text>
+<rect x="520" y="298" width="78" height="30" rx="4" fill="#104281"><title>paraphrase-multilingual · en→en: 0.885</title></rect>
+<text x="559.0" y="317.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.89</text>
+<rect x="600" y="298" width="78" height="30" rx="4" fill="#256abf"><title>paraphrase-multilingual · en→si: 0.667</title></rect>
+<text x="639.0" y="317.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.67</text>
+<rect x="680" y="298" width="78" height="30" rx="4" fill="#3987e5"><title>paraphrase-multilingual · si→en: 0.489</title></rect>
+<text x="719.0" y="317.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.49</text>
+<rect x="760" y="298" width="78" height="30" rx="4" fill="#5598e7"><title>paraphrase-multilingual · ta→si: 0.433</title></rect>
+<text x="799.0" y="317.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.43</text>
+<rect x="840" y="298" width="78" height="30" rx="4" fill="#5598e7"><title>paraphrase-multilingual · si→ta: 0.420</title></rect>
+<text x="879.0" y="317.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.42</text>
+<text x="190" y="349.0" font-size="12" text-anchor="end" fill="#0b0b0b">bm25-char</text>
+<rect x="200" y="330" width="78" height="30" rx="4" fill="#104281"><title>bm25-char · si→si: 0.899</title></rect>
+<text x="239.0" y="349.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.90</text>
+<rect x="280" y="330" width="78" height="30" rx="4" fill="#104281"><title>bm25-char · si→si (no ZWJ): 0.899</title></rect>
+<text x="319.0" y="349.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.90</text>
+<rect x="360" y="330" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-char · si-Latn→si: 0.046</title></rect>
+<text x="399.0" y="349.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
+<rect x="440" y="330" width="78" height="30" rx="4" fill="#184f95"><title>bm25-char · ta→ta: 0.863</title></rect>
+<text x="479.0" y="349.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.86</text>
+<rect x="520" y="330" width="78" height="30" rx="4" fill="#104281"><title>bm25-char · en→en: 0.888</title></rect>
+<text x="559.0" y="349.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.89</text>
+<rect x="600" y="330" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-char · en→si: 0.052</title></rect>
+<text x="639.0" y="349.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
+<rect x="680" y="330" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-char · si→en: 0.063</title></rect>
+<text x="719.0" y="349.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.06</text>
+<rect x="760" y="330" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-char · ta→si: 0.053</title></rect>
 <text x="799.0" y="349.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
-<rect x="840" y="330" width="78" height="30" rx="4" fill="#cde2fb"><title>nomic-embed-text · si→ta: 0.041</title></rect>
-<text x="879.0" y="349.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.04</text>
-<text x="16" y="390" font-size="11" fill="#52514e">Rows sorted by mean over Sinhala tasks. Local Ollama models on an Apple M1; see README for setup.</text>
+<rect x="840" y="330" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-char · si→ta: 0.056</title></rect>
+<text x="879.0" y="349.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.06</text>
+<text x="190" y="381.0" font-size="12" text-anchor="end" fill="#0b0b0b">bm25-word</text>
+<rect x="200" y="362" width="78" height="30" rx="4" fill="#1c5cab"><title>bm25-word · si→si: 0.755</title></rect>
+<text x="239.0" y="381.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.76</text>
+<rect x="280" y="362" width="78" height="30" rx="4" fill="#1c5cab"><title>bm25-word · si→si (no ZWJ): 0.755</title></rect>
+<text x="319.0" y="381.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.76</text>
+<rect x="360" y="362" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-word · si-Latn→si: 0.046</title></rect>
+<text x="399.0" y="381.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
+<rect x="440" y="362" width="78" height="30" rx="4" fill="#256abf"><title>bm25-word · ta→ta: 0.680</title></rect>
+<text x="479.0" y="381.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.68</text>
+<rect x="520" y="362" width="78" height="30" rx="4" fill="#104281"><title>bm25-word · en→en: 0.879</title></rect>
+<text x="559.0" y="381.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.88</text>
+<rect x="600" y="362" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-word · en→si: 0.059</title></rect>
+<text x="639.0" y="381.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.06</text>
+<rect x="680" y="362" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-word · si→en: 0.062</title></rect>
+<text x="719.0" y="381.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.06</text>
+<rect x="760" y="362" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-word · ta→si: 0.051</title></rect>
+<text x="799.0" y="381.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
+<rect x="840" y="362" width="78" height="30" rx="4" fill="#b7d3f6"><title>bm25-word · si→ta: 0.053</title></rect>
+<text x="879.0" y="381.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
+<text x="190" y="413.0" font-size="12" text-anchor="end" fill="#0b0b0b">qwen3-embedding-0.6b</text>
+<rect x="200" y="394" width="78" height="30" rx="4" fill="#5598e7"><title>qwen3-embedding-0.6b · si→si: 0.410</title></rect>
+<text x="239.0" y="413.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.41</text>
+<rect x="280" y="394" width="78" height="30" rx="4" fill="#5598e7"><title>qwen3-embedding-0.6b · si→si (no ZWJ): 0.392</title></rect>
+<text x="319.0" y="413.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.39</text>
+<rect x="360" y="394" width="78" height="30" rx="4" fill="#b7d3f6"><title>qwen3-embedding-0.6b · si-Latn→si: 0.049</title></rect>
+<text x="399.0" y="413.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
+<rect x="440" y="394" width="78" height="30" rx="4" fill="#256abf"><title>qwen3-embedding-0.6b · ta→ta: 0.697</title></rect>
+<text x="479.0" y="413.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.70</text>
+<rect x="520" y="394" width="78" height="30" rx="4" fill="#104281"><title>qwen3-embedding-0.6b · en→en: 0.956</title></rect>
+<text x="559.0" y="413.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.96</text>
+<rect x="600" y="394" width="78" height="30" rx="4" fill="#86b6ef"><title>qwen3-embedding-0.6b · en→si: 0.291</title></rect>
+<text x="639.0" y="413.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.29</text>
+<rect x="680" y="394" width="78" height="30" rx="4" fill="#b7d3f6"><title>qwen3-embedding-0.6b · si→en: 0.121</title></rect>
+<text x="719.0" y="413.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.12</text>
+<rect x="760" y="394" width="78" height="30" rx="4" fill="#9ec5f4"><title>qwen3-embedding-0.6b · ta→si: 0.147</title></rect>
+<text x="799.0" y="413.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.15</text>
+<rect x="840" y="394" width="78" height="30" rx="4" fill="#b7d3f6"><title>qwen3-embedding-0.6b · si→ta: 0.114</title></rect>
+<text x="879.0" y="413.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.11</text>
+<text x="190" y="445.0" font-size="12" text-anchor="end" fill="#0b0b0b">nomic-embed-text</text>
+<rect x="200" y="426" width="78" height="30" rx="4" fill="#b7d3f6"><title>nomic-embed-text · si→si: 0.078</title></rect>
+<text x="239.0" y="445.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.08</text>
+<rect x="280" y="426" width="78" height="30" rx="4" fill="#b7d3f6"><title>nomic-embed-text · si→si (no ZWJ): 0.078</title></rect>
+<text x="319.0" y="445.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.08</text>
+<rect x="360" y="426" width="78" height="30" rx="4" fill="#cde2fb"><title>nomic-embed-text · si-Latn→si: 0.040</title></rect>
+<text x="399.0" y="445.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.04</text>
+<rect x="440" y="426" width="78" height="30" rx="4" fill="#9ec5f4"><title>nomic-embed-text · ta→ta: 0.142</title></rect>
+<text x="479.0" y="445.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.14</text>
+<rect x="520" y="426" width="78" height="30" rx="4" fill="#104281"><title>nomic-embed-text · en→en: 0.923</title></rect>
+<text x="559.0" y="445.0" font-size="12" text-anchor="middle" fill="#fcfcfb">0.92</text>
+<rect x="600" y="426" width="78" height="30" rx="4" fill="#b7d3f6"><title>nomic-embed-text · en→si: 0.075</title></rect>
+<text x="639.0" y="445.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.08</text>
+<rect x="680" y="426" width="78" height="30" rx="4" fill="#b7d3f6"><title>nomic-embed-text · si→en: 0.052</title></rect>
+<text x="719.0" y="445.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
+<rect x="760" y="426" width="78" height="30" rx="4" fill="#b7d3f6"><title>nomic-embed-text · ta→si: 0.050</title></rect>
+<text x="799.0" y="445.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.05</text>
+<rect x="840" y="426" width="78" height="30" rx="4" fill="#cde2fb"><title>nomic-embed-text · si→ta: 0.041</title></rect>
+<text x="879.0" y="445.0" font-size="12" text-anchor="middle" fill="#0b0b0b">0.04</text>
+<text x="16" y="486" font-size="11" fill="#52514e">Rows sorted by mean over Sinhala tasks. Local Ollama models on an Apple M1; see README for setup.</text>
 </svg>
